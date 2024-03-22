@@ -1,12 +1,13 @@
 //
-//  ContentView.swift
+//  Color.swift
 //  ExpenseTracker
 //
-//  Created by Vinod Rathod on 01/03/24.
+//  Created by Vinod Rathod on 22/03/24.
 //
 
+import Foundation
+import UIKit
 import SwiftUI
-import Inject
 
 //extension Color {
 //    init(hex: UInt, alpha: Double = 1) {
@@ -19,18 +20,3 @@ import Inject
 //        )
 //    }
 //}
-//
-struct ContentView: View {
-    @ObservedObject private var IO = Inject.observer
-    
-    var body: some View {
-        Overview()
-        
-        .enableInjection()
-    }
-}
-
-#Preview {
-    ContentView()
-}
-
