@@ -9,9 +9,10 @@ import SwiftUI
 import Inject
 
 struct ExpenseListItems: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
+    
     let title: String
-    let amount: Int
+    let amount: String
     let cat: String
     let catType: String
     
@@ -43,7 +44,7 @@ struct ExpenseListItems: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 2)
         
-        .enableInjection()
+//        .enableInjection()
     }
 }
 

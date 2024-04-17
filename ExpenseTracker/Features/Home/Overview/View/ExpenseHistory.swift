@@ -11,7 +11,10 @@ import Inject
 struct ExpenseHistory: View {
     @ObservedObject private var IO = Inject.observer
     
+    @ObservedObject var expenseViewModelData: ItemListViewModel
+    
     var body: some View {
+        
         VStack(alignment: .center, spacing: 10.0, content: {
             HStack {
                 AmountText(amount: 1234, text: "INCOME")
@@ -24,10 +27,9 @@ struct ExpenseHistory: View {
             .background(Color(uiColor: .systemGray6))
             .cornerRadius(6)
             
-            ExpenseListItems(title: "Laptop EMI", amount: 15000, cat: "EMI", catType: "Spending")
-            ExpenseListItems(title: "Rent", amount: 20000, cat: "Rent", catType: "Spending")
-            ExpenseListItems(title: "Groceries", amount: 5000, cat: "Groceries", catType: "Spending")
-            ExpenseListItems(title: "Groceries", amount: 5000, cat: "Groceries", catType: "Spending")
+            ForEach(expenseViewModelData.items, id: \.id) {item in
+                ExpenseListItems(title: item.title, amount: String(item.amount), cat: item.category, catType: item.name)
+            }
         })
         .padding(16)
         .background(Color.white)
@@ -40,6 +42,6 @@ struct ExpenseHistory: View {
     }
 }
 
-#Preview {
-    ExpenseHistory()
-}
+//#Preview {
+//    ExpenseHistory(expenseViewModelData: ItemListViewModel())
+//}

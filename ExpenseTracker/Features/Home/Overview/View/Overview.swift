@@ -28,12 +28,21 @@ struct Overview: View {
     @State private var showTextInput = false
     @State private var selectedButton = 0
     @State private var textInput: String = ""
+    @State private var currentDetent = PresentationDetent.large
+    
+    @StateObject var expenseViewModelData: ItemListViewModel = ItemListViewModel()
     
 //    @FocusState private var emailFieldIsFocused: Bool = false
     
     init() {
           UIScrollView.appearance().bounces = false
        }
+    
+    func closeSettingsModal() {
+        withAnimation(.easeInOut(duration: 0.8)) {
+            showSettingsSheet = false
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -59,8 +68,11 @@ struct Overview: View {
                                                 .foregroundColor(.white)
                                                 .font(.system(size: 20, weight: .light))
                                         }
-                                        .sheet(isPresented: $showSettingsSheet) {
-                                            Text("Hello")
+                                        .fullScreenCover(isPresented: $showSettingsSheet) {
+                                            SettingsModalContents(
+                                                closeFullModal: self.closeSettingsModal
+                                            )
+//                                                .presentationDetents([.medium, .large, .fraction(0.8), .fraction(200)], selection: $currentDetent)
                                         }
 
                                         
@@ -164,7 +176,7 @@ struct Overview: View {
                             MonthSelector()
                         }
                         
-                        ExpenseHistory()
+                        ExpenseHistory(expenseViewModelData: expenseViewModelData)
                         
                     }
                 }
