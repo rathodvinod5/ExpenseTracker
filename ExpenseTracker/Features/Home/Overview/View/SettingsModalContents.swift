@@ -49,8 +49,6 @@ struct SettingsModalContents: View {
                 .background(Color.white)
                 .shadow(color: Color(UIColor.systemGray3), radius: 15)
                 
-//                OptionsContainer(title: "Spending", chidrens: )
-                
                 SettingsBlocks(blockTitle: "Spends", isSpends: true)
                 SettingsBlocks(blockTitle: "Transactions", isSpends: false)
             }

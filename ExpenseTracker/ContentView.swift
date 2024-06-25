@@ -8,23 +8,53 @@
 import SwiftUI
 import Inject
 
-//extension Color {
-//    init(hex: UInt, alpha: Double = 1) {
-//        self.init(
-//            .sRGB,
-//            red: Double((hex >> 16) & 0xff) / 255,
-//            green: Double((hex >> 08) & 0xff) / 255,
-//            blue: Double((hex >> 00) & 0xff) / 255,
-//            opacity: alpha
-//        )
-//    }
-//}
-//
+
 struct ContentView: View {
     @ObservedObject private var IO = Inject.observer
     
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.blue
+    }
+    
     var body: some View {
-        Overview()
+        
+        ZStack {
+            Color.purple
+                .ignoresSafeArea()
+            
+            
+                TabView {
+                    Group {
+                        Overview()
+                            .tabItem {
+                                Label("Overview", systemImage: "eye.fill")
+                            }
+                            
+                        Text("Transaction")
+                            .tabItem {
+                                Label("Transaction", systemImage: "chart.line.uptrend.xyaxis")
+                            }
+                        
+                        Text("Budget")
+                            .tabItem {
+                                Label("Budget", systemImage: "circle.circle.fill")
+                            }
+                        
+                        Text("Tools")
+                            .tabItem {
+                                Label("Tools", systemImage: "briefcase.fill")
+                            }
+                    }
+                    .toolbar(.visible, for: .tabBar)
+//                    .toolbarBackground(Color.yellow, for: .tabBar)
+                }
+                .padding(.top, 10)
+                .edgesIgnoringSafeArea(.bottom)
+                
+        }
+            .ignoresSafeArea()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
         
         .enableInjection()
     }

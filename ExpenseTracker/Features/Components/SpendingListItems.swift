@@ -14,6 +14,8 @@ struct SpendingListItems: View {
     var title: String
     var show: Bool
     
+    @State var hideEye: Bool = false
+    
     var body: some View {
         HStack {
             Text(title)
@@ -23,13 +25,24 @@ struct SpendingListItems: View {
             
             HStack {
                 Rectangle()
-                    .fill(Color(UIColor.systemGray6))
+                    .fill(!hideEye ?  Color(UIColor.systemGray4) : Color(UIColor.systemGray6))
                     .cornerRadius(4)
                     .frame(width: 40, height: 40)
                     .overlay {
-                        Image(systemName: "eye.fill")
-                            .foregroundColor(Color("CustomBlack"))
-                            .font(.system(size: 16))
+                        if hideEye {
+                            Image(systemName: "eye.slash.fill")
+                                .foregroundColor(Color("CustomBlack"))
+                                .font(.system(size: 16))
+                        } else {
+                            Image(systemName: "eye.fill")
+                                .foregroundColor(Color("CustomBlack"))
+                                .font(.system(size: 16))
+                        }
+                    }
+                    .onTapGesture {
+                        withAnimation {
+                            self.hideEye.toggle()
+                        }
                     }
                 
                 Image(systemName: "line.3.horizontal")
