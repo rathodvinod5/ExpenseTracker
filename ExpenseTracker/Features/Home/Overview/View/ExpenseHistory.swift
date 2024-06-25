@@ -41,7 +41,3 @@ struct ExpenseHistory: View {
         .enableInjection()
     }
 }
-
-//#Preview {
-//    ExpenseHistory(expenseViewModelData: ItemListViewModel())
-//}

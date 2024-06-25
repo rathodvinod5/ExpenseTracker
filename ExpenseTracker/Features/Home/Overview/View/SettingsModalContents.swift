@@ -49,21 +49,10 @@ struct SettingsModalContents: View {
                 .background(Color.white)
                 .shadow(color: Color(UIColor.systemGray3), radius: 15)
                 
-                VStack {
-                    Text("SPENDING")
-                        .font(.system(size: 14))
-                        .foregroundColor(Color("CustomBlack"))
-                        .padding(.bottom, 20)
-                    
-                    SpendingListItems(title: "Spending", show: true)
-                    SpendingListItems(title: "Spending", show: true)
-                    SpendingListItems(title: "Spending", show: true)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(Color.white)
-                .padding(.top, 30)
+//                OptionsContainer(title: "Spending", chidrens: )
+                
+                SettingsBlocks(blockTitle: "Spends", isSpends: true)
+                SettingsBlocks(blockTitle: "Transactions", isSpends: false)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
