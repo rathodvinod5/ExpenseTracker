@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct TransactionListItem: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     
     var title: String
     
@@ -26,7 +26,7 @@ struct TransactionListItem: View {
         }
         .padding(.vertical, 4)
         
-        .enableInjection()
+//        .enableInjection()
     }
 }
 

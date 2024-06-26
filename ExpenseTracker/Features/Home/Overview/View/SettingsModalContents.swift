@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct SettingsModalContents: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     
     @State private var contHeight: CGFloat = 36.0
     var closeFullModal: () -> Void
@@ -55,10 +55,6 @@ struct SettingsModalContents: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
         
-        .enableInjection()
+//        .enableInjection()
     }
 }
-
-//#Preview {
-//    SettingsModalContents()
-//}

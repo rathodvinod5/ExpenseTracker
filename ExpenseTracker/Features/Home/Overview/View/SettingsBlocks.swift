@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct SettingsBlocks: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     
     var blockTitle: String
     var isSpends: Bool = true
@@ -39,6 +39,6 @@ struct SettingsBlocks: View {
         .background(Color.white)
         .padding(.top, 30)
         
-        .enableInjection()
+//        .enableInjection()
     }
 }
