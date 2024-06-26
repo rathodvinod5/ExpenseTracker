@@ -36,7 +36,7 @@ struct ExpenseHistory: View {
         .cornerRadius(10.0)
         .shadow(color: Color(UIColor.systemGray3), radius: 15)
         .padding(.horizontal, 20)
-        .padding(.vertical, 30)
+        .padding(.bottom, 30)
         
         .enableInjection()
     }

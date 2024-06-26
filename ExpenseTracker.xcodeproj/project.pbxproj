@@ -10,6 +10,8 @@
 		670515962C2ADD9C0075E73F /* SettingsBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670515952C2ADD9C0075E73F /* SettingsBlocks.swift */; };
 		6705159A2C2AE3AE0075E73F /* SwitchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670515992C2AE3AE0075E73F /* SwitchComponent.swift */; };
 		6705159C2C2AE5130075E73F /* TransactionListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6705159B2C2AE5130075E73F /* TransactionListItem.swift */; };
+		674E10CF2C2C4F7B00ECE8A5 /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E10CE2C2C4F7B00ECE8A5 /* ListComponent.swift */; };
+		674E10D12C2C569700ECE8A5 /* CustomBarMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E10D02C2C569700ECE8A5 /* CustomBarMark.swift */; };
 		67969FBF2B91F4FC00220D97 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969FBE2B91F4FC00220D97 /* ExpenseTrackerApp.swift */; };
 		67969FC12B91F4FC00220D97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969FC02B91F4FC00220D97 /* ContentView.swift */; };
 		67969FC32B91F4FF00220D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67969FC22B91F4FF00220D97 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		670515952C2ADD9C0075E73F /* SettingsBlocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBlocks.swift; sourceTree = "<group>"; };
 		670515992C2AE3AE0075E73F /* SwitchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchComponent.swift; sourceTree = "<group>"; };
 		6705159B2C2AE5130075E73F /* TransactionListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListItem.swift; sourceTree = "<group>"; };
+		674E10CE2C2C4F7B00ECE8A5 /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
+		674E10D02C2C569700ECE8A5 /* CustomBarMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarMark.swift; sourceTree = "<group>"; };
 		67969FBB2B91F4FC00220D97 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67969FBE2B91F4FC00220D97 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		67969FC02B91F4FC00220D97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				67D1121D2BADA20800E5CC5C /* ExpenseHistory.swift */,
 				67D1E9712BBFF01F0050768F /* SettingsModalContents.swift */,
 				670515952C2ADD9C0075E73F /* SettingsBlocks.swift */,
+				674E10CE2C2C4F7B00ECE8A5 /* ListComponent.swift */,
+				674E10D02C2C569700ECE8A5 /* CustomBarMark.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 				67E0366A2BB41FD500D5574B /* Item.swift in Sources */,
 				67D1121A2BAD9EF300E5CC5C /* Overview.swift in Sources */,
 				6705159A2C2AE3AE0075E73F /* SwitchComponent.swift in Sources */,
+				674E10D12C2C569700ECE8A5 /* CustomBarMark.swift in Sources */,
 				6705159C2C2AE5130075E73F /* TransactionListItem.swift in Sources */,
 				67D1121C2BADA11A00E5CC5C /* MonthSelector.swift in Sources */,
 				67969FC12B91F4FC00220D97 /* ContentView.swift in Sources */,
@@ -276,6 +283,7 @@
 				67D112112BAD97F400E5CC5C /* Color.swift in Sources */,
 				67E0366C2BB4202500D5574B /* ItemListViewModel.swift in Sources */,
 				67D112142BAD999700E5CC5C /* TextWithLabel.swift in Sources */,
+				674E10CF2C2C4F7B00ECE8A5 /* ListComponent.swift in Sources */,
 				67D112202BADA46100E5CC5C /* ExpenseListItems.swift in Sources */,
 				67ECE2302BCFFCC30018D93D /* OptionsContainer.swift in Sources */,
 			);

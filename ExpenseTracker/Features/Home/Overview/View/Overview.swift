@@ -158,29 +158,41 @@ struct Overview: View {
                                 )
                                 .padding(.bottom, 20)
                             
-                            if showTextInput {
-                                HStack {
-                                    TextField(
-                                            "Search",
-                                            text: $textInput
-                                        )
-                                    .frame(height: 54)
+                            VStack {
+                                if showTextInput {
+                                    HStack {
+                                        TextField(
+                                                "Search",
+                                                text: $textInput
+                                            )
+                                        .frame(height: 54)
+                                        .padding(.horizontal, 20)
+                                        .background(.white)
+        //                                .focused($emailFieldIsFocused)
+                                        .textInputAutocapitalization(.never)
+                                        .disableAutocorrection(true)
+                                        .clipShape(Capsule())
+                                        .shadow(color: Color(UIColor.systemGray3), radius: 15)
+                                    }
                                     .padding(.horizontal, 20)
-                                    .background(.white)
-    //                                .focused($emailFieldIsFocused)
-                                    .textInputAutocapitalization(.never)
-                                    .disableAutocorrection(true)
-                                    .clipShape(Capsule())
-                                    .shadow(color: Color(UIColor.systemGray3), radius: 15)
+                                    .frame(height: 54)
+                                } else {
+                                    MonthSelector()
                                 }
-                                .padding(.horizontal, 20)
-                                .frame(height: 54)
+                            }
+                            .padding(.bottom, 20)
+                            
+                            if selectedButton == 1 {
+                                VStack {
+                                    ExpenseHistory(expenseViewModelData: expenseViewModelData)
+                                }
                             } else {
-                                MonthSelector()
+                                VStack {
+                                    ListComponent()
+                                }
+                                .padding(.horizontal, 30)
                             }
                             
-                            ExpenseHistory(expenseViewModelData: expenseViewModelData)
-                            ExpenseHistory(expenseViewModelData: expenseViewModelData)
                         }
     //                    .padding(.bottom, bottomPadding)
     //                    .padding(.bottom, 30)

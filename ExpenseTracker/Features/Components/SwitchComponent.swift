@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct SwitchComponent: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     
     @Binding var isOn: Bool // Binding to a boolean state variable
 
@@ -30,6 +30,6 @@ struct SwitchComponent: View {
                     .offset(x: isOn ? 8 : -8, y: 0) // Move circle based on state
             }
             
-            .enableInjection()
+//            .enableInjection()
         }
 }
