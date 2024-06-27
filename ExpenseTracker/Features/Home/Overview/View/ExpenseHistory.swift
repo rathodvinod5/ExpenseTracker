@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct ExpenseHistory: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     
     @ObservedObject var expenseViewModelData: ItemListViewModel
     
@@ -38,6 +38,6 @@ struct ExpenseHistory: View {
         .padding(.horizontal, 20)
         .padding(.bottom, 30)
         
-        .enableInjection()
+//        .enableInjection()
     }
 }

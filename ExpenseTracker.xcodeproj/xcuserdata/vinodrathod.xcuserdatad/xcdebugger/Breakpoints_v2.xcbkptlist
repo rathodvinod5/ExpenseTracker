@@ -18,6 +18,38 @@
             endingLineNumber = "25"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "99ABF94B-9720-40D6-B33C-24E56C5FE80E - cc0c223d460c6b02"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in ExpenseTracker.ContentView.body.getter : some"
+                  moduleName = "ExpenseTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinodrathod/Desktop/development/ExpenseTracker/ExpenseTracker/ExpenseTracker/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "441">
+               </Location>
+               <Location
+                  uuid = "99ABF94B-9720-40D6-B33C-24E56C5FE80E - 7ee7155607133b78"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar(_: SwiftUI.Visibility, for: SwiftUI.ToolbarPlacement...) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0)&gt; in ExpenseTracker.ContentView.body.getter : some"
+                  moduleName = "ExpenseTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vinodrathod/Desktop/development/ExpenseTracker/ExpenseTracker/ExpenseTracker/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

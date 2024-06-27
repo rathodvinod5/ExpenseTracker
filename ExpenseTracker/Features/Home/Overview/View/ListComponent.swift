@@ -10,16 +10,23 @@ import Inject
 
 struct ListComponent: View {
     @ObservedObject private var IO = Inject.observer
+    @ObservedObject var categoryData: CateogoriesViewModel = CateogoriesViewModel()
+    
     
     var body: some View {
         VStack {
-            CustomBarMark()
+            VStack {
+                CustomBarMark()
+            }
+            .frame(maxWidth: .infinity)
+            .padding(20)
+            .background(.white)
+            .cornerRadius(20)
+            
+            ExpenseContainer(categoriesItemsData: categoryData.categoriesItemsData)
         }
-        .frame(maxWidth: .infinity)
-        .padding(20)
-        .background(.white)
-        .cornerRadius(20)
         
             .enableInjection()
     }
+    
 }
