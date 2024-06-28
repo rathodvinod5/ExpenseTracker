@@ -11,12 +11,12 @@ import Foundation
 struct CategoryItem: Identifiable {
     let id: UUID
     let title: String
-    let value: Double
+    let value: Float
 }
 
 struct CategoriesModel: Identifiable {
     let id: UUID
     let title: String
-    let totalAmount: Double
+    let totalAmount: Float
     let items: [CategoryItem]
 }

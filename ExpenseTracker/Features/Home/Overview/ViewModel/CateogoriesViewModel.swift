@@ -13,7 +13,7 @@ class CateogoriesViewModel: ObservableObject {
     
     init() {
         categoriesItemsData = [
-            CategoriesModel(id: UUID(), title: "Housing", totalAmount: 15000,
+            CategoriesModel(id: UUID(), title: "Housing", totalAmount: 115000,
                 items: [
                     CategoryItem(id: UUID(), title: "Rent", value: 22000),
                     CategoryItem(id: UUID(), title: "Telephone", value: 2000)

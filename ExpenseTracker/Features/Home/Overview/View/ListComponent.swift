@@ -17,13 +17,15 @@ struct ListComponent: View {
         VStack {
             VStack {
                 CustomBarMark()
+                    .environmentObject(categoryData)
             }
             .frame(maxWidth: .infinity)
             .padding(20)
             .background(.white)
             .cornerRadius(20)
             
-            ExpenseContainer(categoriesItemsData: categoryData.categoriesItemsData)
+            ExpenseContainer()
+                .environmentObject(categoryData)
         }
         
             .enableInjection()

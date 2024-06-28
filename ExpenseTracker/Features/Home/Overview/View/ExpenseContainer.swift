@@ -10,9 +10,10 @@ import Inject
 
 struct ExpenseContainer: View {
     @ObservedObject private var IO = Inject.observer
+//    @ObservedObject var categoryData: CateogoriesViewModel
     
     @State var selectedButton = 0
-    var categoriesItemsData: [CategoriesModel]
+//    var categoriesItemsData: [CategoriesModel]
     
     var body: some View {
         VStack {
@@ -29,8 +30,10 @@ struct ExpenseContainer: View {
             
             if selectedButton == 0 {
                 HeadCategoriesContainer()
+                    .padding(.horizontal, 20)
             } else {
                 AllCategoriesContainer()
+                    .padding(.horizontal, 20)
             }
             
         }
@@ -39,9 +42,6 @@ struct ExpenseContainer: View {
         .background(.white)
         .cornerRadius(20)
         .padding(.top, 20)
-        .onAppear() {
-            print("category: \(categoriesItemsData.count)")
-        }
         
         
             .enableInjection()

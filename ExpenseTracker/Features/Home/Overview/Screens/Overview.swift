@@ -204,6 +204,8 @@ struct Overview: View {
                 .ignoresSafeArea()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
+            
+            FloatingButton()
         }
         
         .enableInjection()

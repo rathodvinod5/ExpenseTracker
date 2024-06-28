@@ -11,6 +11,10 @@
 		6705159A2C2AE3AE0075E73F /* SwitchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670515992C2AE3AE0075E73F /* SwitchComponent.swift */; };
 		6705159C2C2AE5130075E73F /* TransactionListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6705159B2C2AE5130075E73F /* TransactionListItem.swift */; };
 		671A2B1C2C2C7B9A0054BF88 /* ExpenseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A2B1B2C2C7B9A0054BF88 /* ExpenseContainer.swift */; };
+		671CCF5D2C2F260F0045824D /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671CCF5C2C2F260F0045824D /* FloatingButton.swift */; };
+		671CCF612C2F2DDA0045824D /* CategoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671CCF602C2F2DDA0045824D /* CategoryModels.swift */; };
+		671CCF632C2F2F890045824D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671CCF622C2F2F890045824D /* CategoryViewModel.swift */; };
+		673D59EE2C2E9F7500E086CD /* CategoriesListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673D59ED2C2E9F7500E086CD /* CategoriesListItems.swift */; };
 		674E10CF2C2C4F7B00ECE8A5 /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E10CE2C2C4F7B00ECE8A5 /* ListComponent.swift */; };
 		674E10D12C2C569700ECE8A5 /* CustomBarMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E10D02C2C569700ECE8A5 /* CustomBarMark.swift */; };
 		67787E532C2D458C009914AA /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67787E522C2D458C009914AA /* BarChartView.swift */; };
@@ -45,6 +49,10 @@
 		670515992C2AE3AE0075E73F /* SwitchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchComponent.swift; sourceTree = "<group>"; };
 		6705159B2C2AE5130075E73F /* TransactionListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListItem.swift; sourceTree = "<group>"; };
 		671A2B1B2C2C7B9A0054BF88 /* ExpenseContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseContainer.swift; sourceTree = "<group>"; };
+		671CCF5C2C2F260F0045824D /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		671CCF602C2F2DDA0045824D /* CategoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModels.swift; sourceTree = "<group>"; };
+		671CCF622C2F2F890045824D /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		673D59ED2C2E9F7500E086CD /* CategoriesListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListItems.swift; sourceTree = "<group>"; };
 		674E10CE2C2C4F7B00ECE8A5 /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
 		674E10D02C2C569700ECE8A5 /* CustomBarMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarMark.swift; sourceTree = "<group>"; };
 		67787E522C2D458C009914AA /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
@@ -86,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		671CCF5E2C2F2B510045824D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				67D112192BAD9EF300E5CC5C /* Overview.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		671CCF5F2C2F2DBF0045824D /* CategoryData */ = {
+			isa = PBXGroup;
+			children = (
+				671CCF602C2F2DDA0045824D /* CategoryModels.swift */,
+				671CCF622C2F2F890045824D /* CategoryViewModel.swift */,
+			);
+			path = CategoryData;
+			sourceTree = "<group>";
+		};
 		67969FB22B91F4FC00220D97 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +161,7 @@
 		67D112092BAD960C00E5CC5C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				671CCF5F2C2F2DBF0045824D /* CategoryData */,
 				67D112152BAD9EA400E5CC5C /* Overview */,
 			);
 			path = Home;
@@ -169,6 +195,8 @@
 				67787E522C2D458C009914AA /* BarChartView.swift */,
 				67787E542C2D46D3009914AA /* DonutChart.swift */,
 				67787E5A2C2D4EF2009914AA /* SwitchButtons.swift */,
+				673D59ED2C2E9F7500E086CD /* CategoriesListItems.swift */,
+				671CCF5C2C2F260F0045824D /* FloatingButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -176,6 +204,7 @@
 		67D112152BAD9EA400E5CC5C /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				671CCF5E2C2F2B510045824D /* Screens */,
 				67D112162BAD9EBA00E5CC5C /* Model */,
 				67D112182BAD9EC400E5CC5C /* ViewModel */,
 				67D112172BAD9EC000E5CC5C /* View */,
@@ -195,7 +224,6 @@
 		67D112172BAD9EC000E5CC5C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				67D112192BAD9EF300E5CC5C /* Overview.swift */,
 				67D1121D2BADA20800E5CC5C /* ExpenseHistory.swift */,
 				67D1E9712BBFF01F0050768F /* SettingsModalContents.swift */,
 				670515952C2ADD9C0075E73F /* SettingsBlocks.swift */,
@@ -298,7 +326,9 @@
 				67D1E9742BC00A950050768F /* SpendingListItems.swift in Sources */,
 				67D1121E2BADA20800E5CC5C /* ExpenseHistory.swift in Sources */,
 				67E0366A2BB41FD500D5574B /* Item.swift in Sources */,
+				671CCF612C2F2DDA0045824D /* CategoryModels.swift in Sources */,
 				67787E632C2D6FDC009914AA /* AllCategoriesContainer.swift in Sources */,
+				671CCF632C2F2F890045824D /* CategoryViewModel.swift in Sources */,
 				67787E552C2D46D3009914AA /* DonutChart.swift in Sources */,
 				671A2B1C2C2C7B9A0054BF88 /* ExpenseContainer.swift in Sources */,
 				67D1121A2BAD9EF300E5CC5C /* Overview.swift in Sources */,
@@ -314,7 +344,9 @@
 				670515962C2ADD9C0075E73F /* SettingsBlocks.swift in Sources */,
 				67787E5D2C2D557F009914AA /* CategoriesModel.swift in Sources */,
 				67969FBF2B91F4FC00220D97 /* ExpenseTrackerApp.swift in Sources */,
+				671CCF5D2C2F260F0045824D /* FloatingButton.swift in Sources */,
 				67D1E9722BBFF01F0050768F /* SettingsModalContents.swift in Sources */,
+				673D59EE2C2E9F7500E086CD /* CategoriesListItems.swift in Sources */,
 				67D112112BAD97F400E5CC5C /* Color.swift in Sources */,
 				67E0366C2BB4202500D5574B /* ItemListViewModel.swift in Sources */,
 				67D112142BAD999700E5CC5C /* TextWithLabel.swift in Sources */,
