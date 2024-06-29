@@ -32,13 +32,12 @@ struct Overview: View {
     
     @StateObject var expenseViewModelData: ItemListViewModel = ItemListViewModel()
     
-//    var bottomPadding: CGFloat
     
 //    @FocusState private var emailFieldIsFocused: Bool = false
     
-    init() {
-          UIScrollView.appearance().bounces = false
-       }
+//    init() {
+//          UIScrollView.appearance().bounces = false
+//       }
     
     func closeSettingsModal() {
         withAnimation(.easeInOut(duration: 0.8)) {
@@ -120,27 +119,28 @@ struct Overview: View {
                                         .padding(.horizontal, 20)
                                         
                                         HStack {
-                                            Capsule()
-                                                .fill(Color(hex: 0xe1bee7, alpha: selectedButton == 0 ? 0.12 : 0))
-                                                .frame(width: 120, height: 34)
-                                                .overlay(
-                                                    Text("SPENDING")
-                                                        .foregroundColor(Color(hex: 0xf5f5f5))
-                                                        .font(.system(size: 14).bold())
+                                            Text("SPENDING")
+                                                .padding(.horizontal, 20)
+                                                .padding(.vertical, 10)
+                                                .foregroundColor(Color.white)
+                                                .font(.system(size: 13).bold())
+                                                .background(
+                                                    Capsule()
+                                                        .fill(Color(hex: 0xe1bee7, alpha: selectedButton == 0 ? 0.12 : 0))
                                                 )
                                                 .onTapGesture {
                                                     withAnimation {
                                                         selectedButton = 0
                                                     }
                                                 }
-                                            Divider()
-                                            Capsule()
-                                                .fill(Color(hex: 0xe1bee7, alpha: selectedButton == 1 ? 0.12 : 0))
-                                                .frame(width: 120, height: 34)
-                                                .overlay(
-                                                    Text("LIST")
-                                                        .foregroundColor(Color(hex: 0xf5f5f5))
-                                                        .font(.system(size: 14).bold())
+                                            Text("LIST")
+                                                .padding(.horizontal, 20)
+                                                .padding(.vertical, 10)
+                                                .foregroundColor(Color.white)
+                                                .font(.system(size: 13).bold())
+                                                .background(
+                                                    Capsule()
+                                                        .fill(Color(hex: 0xe1bee7, alpha: selectedButton == 1 ? 0.12 : 0))
                                                 )
                                                 .onTapGesture {
                                                     withAnimation {
@@ -190,7 +190,7 @@ struct Overview: View {
                                 VStack {
                                     ListComponent()
                                 }
-                                .padding(.horizontal, 30)
+                                .padding(.horizontal, 20)
                             }
                             
                         }
@@ -204,6 +204,8 @@ struct Overview: View {
                 .ignoresSafeArea()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
+            
+            FloatingButton()
         }
         
         .enableInjection()
