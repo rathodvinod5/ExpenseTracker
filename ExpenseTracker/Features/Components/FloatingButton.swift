@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import Inject
 
 struct FloatingButton: View {
+    @ObservedObject private var IO = Inject.observer
+    
+    @Binding var showAddNewSheet: Bool
+    
     var body: some View {
         VStack {
             Spacer()
@@ -16,6 +21,9 @@ struct FloatingButton: View {
                 Button(action: {
                     // Action when button is tapped
                     print("Button tapped")
+                    withAnimation {
+                        showAddNewSheet.toggle()
+                    }
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -33,5 +41,7 @@ struct FloatingButton: View {
                 .padding(.bottom, 10)
             }
         }
+        
+        .enableInjection()
     }
 }

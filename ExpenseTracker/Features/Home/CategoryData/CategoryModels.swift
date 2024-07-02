@@ -6,17 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct CategoryModel {
     var id: UUID
     var title: String
     var color: String
     var icon: String
+    var parentCategory: String
 }
 
 struct ParentCategoryModel {
     var id: UUID
     var title: String
-    var color: String
+    var color: Color
     var icon: String
 }

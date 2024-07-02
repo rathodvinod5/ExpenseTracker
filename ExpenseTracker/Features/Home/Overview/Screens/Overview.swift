@@ -29,6 +29,7 @@ struct Overview: View {
     @State private var selectedButton = 0
     @State private var textInput: String = ""
     @State private var currentDetent = PresentationDetent.large
+    @State private var showAddNewAmountSheet = false
     
     @StateObject var expenseViewModelData: ItemListViewModel = ItemListViewModel()
     
@@ -205,7 +206,11 @@ struct Overview: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
             
-            FloatingButton()
+            FloatingButton(showAddNewSheet: $showAddNewAmountSheet)
+                .sheet(isPresented: $showAddNewAmountSheet) {
+                    NewTransaction(showAddNewSheet: $showAddNewAmountSheet)
+                        .presentationDetents([.large])
+                    }
         }
         
         .enableInjection()

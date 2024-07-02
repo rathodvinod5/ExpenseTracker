@@ -14,12 +14,13 @@ struct ExpenseContainer: View {
     
     @State var selectedButton = 0
 //    var categoriesItemsData: [CategoriesModel]
+    let buttonsArray: [String] = ["HEAD CATEGORIES", "CATEGORIES"]
     
     var body: some View {
         VStack {
             DonutChartContainer()
             
-            SwitchButtons(selectedButton: $selectedButton, onTapHandler: { indexNumber in
+            SwitchButtons(selectedButton: $selectedButton, buttonsArray: buttonsArray, onTapHandler: { indexNumber in
                     withAnimation {
                         selectedButton = indexNumber
                     }
