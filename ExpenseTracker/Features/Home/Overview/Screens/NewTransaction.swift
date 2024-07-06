@@ -11,10 +11,11 @@ import Inject
 struct NewTransaction: View {
     @ObservedObject private var IO = Inject.observer
     
+    
     @State private var currentIndex = 0
+    @State private var isPresented = false
     
     @Binding var showAddNewSheet: Bool
-
     
     var body: some View {
         let imageSize: CGFloat = 24
@@ -61,6 +62,7 @@ struct NewTransaction: View {
             }
             
             VStack {
+
                 ListItemComponent(
                     iconName: "archivebox",
                     title: "Category",
@@ -68,6 +70,13 @@ struct NewTransaction: View {
                     iconBackgroundColor: Color(UIColor.systemGray4),
                     showRightComponent: false
                 )
+                .onTapGesture {
+                    self.isPresented.toggle()
+                }
+                .fullScreenCover(isPresented: $isPresented) {
+                    SelectCategories(isPresented: $isPresented)
+                }
+                
                 Divider().frame(height: 1)
                 ListItemComponent(
                     iconName: "archivebox",
