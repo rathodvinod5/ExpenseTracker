@@ -11,7 +11,8 @@ import SwiftUI
 struct CategoryModel {
     var id: UUID
     var title: String
-    var color: String
+    var tag: String
+    var color: Color
     var icon: String
     var parentCategory: String
 }
@@ -19,6 +20,8 @@ struct CategoryModel {
 struct ParentCategoryModel {
     var id: UUID
     var title: String
+    var tag: String
     var color: Color
     var icon: String
+    var items: [String]
 }

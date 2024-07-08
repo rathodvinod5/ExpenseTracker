@@ -27,7 +27,9 @@ struct SettingsModalContents: View {
                             .foregroundColor(Color("CustomBlack"))
                             .font(.system(size: 24))
                             .onTapGesture {
-                                self.closeFullModal()
+                                withAnimation(Animation.easeInOut(duration: 5.0)) {
+                                    self.closeFullModal()
+                                }
                             }
                     }
                     .frame(width: contHeight, height: contHeight)
