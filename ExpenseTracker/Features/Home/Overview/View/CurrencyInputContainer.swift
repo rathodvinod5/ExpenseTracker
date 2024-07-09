@@ -34,7 +34,7 @@ struct CurrencyInputContainer: View {
                 .multilineTextAlignment(.center)
                 .keyboardType(.numberPad) // Keyboard type set to numbers only
                 .frame(height: 50) // Adjust height as needed
-//                        .focused($isEditing)
+//                .focused($isEditing)
                 .onAppear {
                     // Delay showing keyboard with animation
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -43,10 +43,9 @@ struct CurrencyInputContainer: View {
                         }
                     }
                 }
-                .animation(.easeInOut(duration: 0.5)) // Animation for showing keyboard
                 .onTapGesture {
                     // Handle tap gesture to trigger focus and show keyboard
-                    withAnimation {
+                    withAnimation(.easeInOut(duration: 0.5)) {
                         self.isEditing = true
                     }
                 }

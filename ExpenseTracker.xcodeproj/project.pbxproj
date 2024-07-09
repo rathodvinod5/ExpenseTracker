@@ -17,6 +17,11 @@
 		673D59EE2C2E9F7500E086CD /* CategoriesListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673D59ED2C2E9F7500E086CD /* CategoriesListItems.swift */; };
 		674E10CF2C2C4F7B00ECE8A5 /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E10CE2C2C4F7B00ECE8A5 /* ListComponent.swift */; };
 		674E10D12C2C569700ECE8A5 /* CustomBarMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E10D02C2C569700ECE8A5 /* CustomBarMark.swift */; };
+		6761A0E22C3D993100804612 /* WalletItemWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761A0E12C3D993100804612 /* WalletItemWithIcon.swift */; };
+		6761A0E42C3DAED800804612 /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761A0E32C3DAED800804612 /* CalendarMonthView.swift */; };
+		67643E3B2C3D3E13004D5ED7 /* SheetContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67643E3A2C3D3E13004D5ED7 /* SheetContents.swift */; };
+		67643E412C3D40B1004D5ED7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67643E402C3D40B1004D5ED7 /* Model.swift */; };
+		67643E432C3D4270004D5ED7 /* WalletAndTransactionViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67643E422C3D4270004D5ED7 /* WalletAndTransactionViewModal.swift */; };
 		67787E532C2D458C009914AA /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67787E522C2D458C009914AA /* BarChartView.swift */; };
 		67787E552C2D46D3009914AA /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67787E542C2D46D3009914AA /* DonutChart.swift */; };
 		67787E572C2D4910009914AA /* DonutChartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67787E562C2D4910009914AA /* DonutChartContainer.swift */; };
@@ -60,6 +65,11 @@
 		673D59ED2C2E9F7500E086CD /* CategoriesListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListItems.swift; sourceTree = "<group>"; };
 		674E10CE2C2C4F7B00ECE8A5 /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
 		674E10D02C2C569700ECE8A5 /* CustomBarMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarMark.swift; sourceTree = "<group>"; };
+		6761A0E12C3D993100804612 /* WalletItemWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItemWithIcon.swift; sourceTree = "<group>"; };
+		6761A0E32C3DAED800804612 /* CalendarMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonthView.swift; sourceTree = "<group>"; };
+		67643E3A2C3D3E13004D5ED7 /* SheetContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContents.swift; sourceTree = "<group>"; };
+		67643E402C3D40B1004D5ED7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		67643E422C3D4270004D5ED7 /* WalletAndTransactionViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAndTransactionViewModal.swift; sourceTree = "<group>"; };
 		67787E522C2D458C009914AA /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		67787E542C2D46D3009914AA /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 		67787E562C2D4910009914AA /* DonutChartContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChartContainer.swift; sourceTree = "<group>"; };
@@ -123,6 +133,31 @@
 			path = CategoryData;
 			sourceTree = "<group>";
 		};
+		67643E3C2C3D4057004D5ED7 /* GlobalData */ = {
+			isa = PBXGroup;
+			children = (
+				67643E3F2C3D407F004D5ED7 /* ViewModel */,
+				67643E3E2C3D406F004D5ED7 /* Model */,
+			);
+			path = GlobalData;
+			sourceTree = "<group>";
+		};
+		67643E3E2C3D406F004D5ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67643E402C3D40B1004D5ED7 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67643E3F2C3D407F004D5ED7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				67643E422C3D4270004D5ED7 /* WalletAndTransactionViewModal.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		67969FB22B91F4FC00220D97 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +199,7 @@
 		67D112082BAD95FA00E5CC5C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				67643E3C2C3D4057004D5ED7 /* GlobalData */,
 				67D112122BAD997A00E5CC5C /* Components */,
 				67D112092BAD960C00E5CC5C /* Home */,
 			);
@@ -211,6 +247,8 @@
 				671CCF5C2C2F260F0045824D /* FloatingButton.swift */,
 				67A5D3B92C37FF1800B23E00 /* ListItemComponent.swift */,
 				67A5D3BB2C38055F00B23E00 /* ListItemComponentAlt.swift */,
+				6761A0E12C3D993100804612 /* WalletItemWithIcon.swift */,
+				6761A0E32C3DAED800804612 /* CalendarMonthView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -248,6 +286,7 @@
 				67787E602C2D6F8C009914AA /* HeadCategoriesContainer.swift */,
 				67787E622C2D6FDC009914AA /* AllCategoriesContainer.swift */,
 				67A5D3B32C37F57600B23E00 /* CurrencyInputContainer.swift */,
+				67643E3A2C3D3E13004D5ED7 /* SheetContents.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +381,7 @@
 				67A5D3B42C37F57600B23E00 /* CurrencyInputContainer.swift in Sources */,
 				67D1121E2BADA20800E5CC5C /* ExpenseHistory.swift in Sources */,
 				67E0366A2BB41FD500D5574B /* Item.swift in Sources */,
+				67643E432C3D4270004D5ED7 /* WalletAndTransactionViewModal.swift in Sources */,
 				671CCF612C2F2DDA0045824D /* CategoryModels.swift in Sources */,
 				67787E632C2D6FDC009914AA /* AllCategoriesContainer.swift in Sources */,
 				671CCF632C2F2F890045824D /* CategoryViewModel.swift in Sources */,
@@ -356,22 +396,26 @@
 				67787E5F2C2D5841009914AA /* CateogoriesViewModel.swift in Sources */,
 				67D1121C2BADA11A00E5CC5C /* MonthSelector.swift in Sources */,
 				67787E5B2C2D4EF2009914AA /* SwitchButtons.swift in Sources */,
+				6761A0E42C3DAED800804612 /* CalendarMonthView.swift in Sources */,
 				67969FC12B91F4FC00220D97 /* ContentView.swift in Sources */,
 				670515962C2ADD9C0075E73F /* SettingsBlocks.swift in Sources */,
 				67787E5D2C2D557F009914AA /* CategoriesModel.swift in Sources */,
 				67969FBF2B91F4FC00220D97 /* ExpenseTrackerApp.swift in Sources */,
 				671CCF5D2C2F260F0045824D /* FloatingButton.swift in Sources */,
+				6761A0E22C3D993100804612 /* WalletItemWithIcon.swift in Sources */,
 				67D1E9722BBFF01F0050768F /* SettingsModalContents.swift in Sources */,
 				673D59EE2C2E9F7500E086CD /* CategoriesListItems.swift in Sources */,
 				67D112112BAD97F400E5CC5C /* Color.swift in Sources */,
 				67E0366C2BB4202500D5574B /* ItemListViewModel.swift in Sources */,
 				67D112142BAD999700E5CC5C /* TextWithLabel.swift in Sources */,
 				674E10CF2C2C4F7B00ECE8A5 /* ListComponent.swift in Sources */,
+				67643E3B2C3D3E13004D5ED7 /* SheetContents.swift in Sources */,
 				67D112202BADA46100E5CC5C /* ExpenseListItems.swift in Sources */,
 				67ECE2302BCFFCC30018D93D /* OptionsContainer.swift in Sources */,
 				6799065B2C39558D00275A30 /* SelectCategories.swift in Sources */,
 				67787E612C2D6F8C009914AA /* HeadCategoriesContainer.swift in Sources */,
 				67A5D3BA2C37FF1800B23E00 /* ListItemComponent.swift in Sources */,
+				67643E412C3D40B1004D5ED7 /* Model.swift in Sources */,
 				678729C42C346690002E93D0 /* NewTransaction.swift in Sources */,
 				67A5D3BC2C38056000B23E00 /* ListItemComponentAlt.swift in Sources */,
 			);

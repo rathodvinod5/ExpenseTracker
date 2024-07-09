@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct FloatingButton: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     
     @Binding var showAddNewSheet: Bool
     
@@ -42,6 +42,6 @@ struct FloatingButton: View {
             }
         }
         
-        .enableInjection()
+//        .enableInjection()
     }
 }

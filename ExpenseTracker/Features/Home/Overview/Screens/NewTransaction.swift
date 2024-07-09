@@ -11,17 +11,51 @@ import Inject
 struct NewTransaction: View {
     @ObservedObject private var IO = Inject.observer
     
-    
     @State private var currentIndex = 0
     @State private var isPresented = false
+    @State private var showHalfModal: Bool = false
+    @State private var showHalfModal2: Bool = false
+    @State private var transactionType: String = "expense"
+    @State var selectedCategory: CategoryModel = CategoryModel(
+        id: UUID(),
+        title: "Miscelleneous",
+        tag: "miscelleneous",
+        color: Color(UIColor.systemGray4),
+        icon: "archivebox.fill", 
+        parentCategory: "miscelleneous"
+    )
+    @State var selectedWallet: WalletModel = WalletModel(
+        id: UUID(),
+        title: "Spending",
+        tag: "spending",
+        icon: "wallet.pass.fill",
+        backgroundColor: Color(UIColor.systemBlue)
+    )
+    @State var secondarySelectedWallet: WalletModel = WalletModel(
+        id: UUID(),
+        title: "Spending",
+        tag: "spending",
+        icon: "wallet.pass.fill",
+        backgroundColor: Color(UIColor.systemBlue)
+    )
     
     @Binding var showAddNewSheet: Bool
     
+//    init() {
+//        selectedCategory = categoryViewModel.allCategories["miscelleneous"]!
+//    }
+    
+//    @State private var selectedCategory: CategoryModel = {
+//        // Access categoryViewModel here if needed
+//        return categoryViewModel.allCategories["miscelleneous"]!
+//    }()
+    
     var body: some View {
         let imageSize: CGFloat = 24
-        var buttonsArray: [String] = ["EXPENSE", "INCOME", "TRANSFER"]
+        let buttonsArray: [String] = ["EXPENSE", "INCOME", "TRANSFER"]
         
         VStack {
+            
             VStack {
                 HStack {
                     Button {
@@ -57,35 +91,71 @@ struct NewTransaction: View {
                 .padding(.bottom, 10)
                 
                 Divider()
-                 .frame(height: 1)
-                
+                    .frame(height: 1)
             }
             
             VStack {
-
+                
                 ListItemComponent(
-                    iconName: "archivebox",
+                    iconName: selectedCategory.icon,
                     title: "Category",
-                    titleValue: "Miscelleneous",
-                    iconBackgroundColor: Color(UIColor.systemGray4),
+                    titleValue: selectedCategory.title,
+                    iconBackgroundColor: selectedCategory.color,
                     showRightComponent: false
                 )
                 .onTapGesture {
-                    self.isPresented.toggle()
+                    withAnimation {
+                        self.isPresented.toggle()
+                    }
                 }
                 .fullScreenCover(isPresented: $isPresented) {
-                    SelectCategories(isPresented: $isPresented)
+                    SelectCategories(isPresented: $isPresented, selectedCategory: $selectedCategory)
                 }
                 
+                    
                 Divider().frame(height: 1)
                 ListItemComponent(
-                    iconName: "archivebox",
-                    title: "From",
-                    titleValue: "Spending",
-                    iconBackgroundColor: Color.teal,
+                    iconName: selectedWallet.icon,
+                    title: currentIndex == 1 ? "To" : "From",
+                    titleValue: selectedWallet.title,
+                    iconBackgroundColor: selectedWallet.backgroundColor,
                     showRightComponent: true
                 )
+                .onTapGesture {
+                    self.showHalfModal.toggle()
+                }
+                .sheet(isPresented: $showHalfModal) {
+                    SheetContents(
+                        selectedWallet: $selectedWallet,
+                        showHalfModal: $showHalfModal
+                    )
+                        .padding(.top, -10)
+                        .presentationDetents([.medium, .large])
+                }
                 Divider().frame(height: 1)
+                
+                if currentIndex == 2 {
+                    ListItemComponent(
+                        iconName: secondarySelectedWallet.icon,
+                        title: "To",
+                        titleValue: secondarySelectedWallet.title,
+                        iconBackgroundColor: secondarySelectedWallet.backgroundColor,
+                        showRightComponent: true
+                    )
+                    .onTapGesture {
+                        self.showHalfModal2.toggle()
+                    }
+                    .sheet(isPresented: $showHalfModal2) {
+                        SheetContents(
+                            selectedWallet: $secondarySelectedWallet,
+                            showHalfModal: $showHalfModal2
+                        )
+                            .padding(.top, -10)
+                            .presentationDetents([.medium, .large])
+                    }
+                    Divider().frame(height: 1)
+                }
+                
                 ListItemComponentAlt(
                     iconName: "note.text.badge.plus",
                     title: "Note",
@@ -101,6 +171,8 @@ struct NewTransaction: View {
                     iconColor: Color("CustomBlack"),
                     showRightComponent: true
                 )
+                
+                
                 Divider().frame(height: 1)
                 ListItemComponentAlt(
                     iconName: "repeat.circle",
@@ -113,11 +185,11 @@ struct NewTransaction: View {
             }
             .padding(.horizontal, 20)
             
-            
             Spacer()
         }
         .padding(.vertical, 10)
         
-            .enableInjection()
+        .enableInjection()
     }
 }
+
