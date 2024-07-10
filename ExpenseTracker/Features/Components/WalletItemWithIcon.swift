@@ -1,33 +1,33 @@
 //
-//  ListItemComponentAlt.swift
+//  WalletItemWithIcon.swift
 //  ExpenseTracker
 //
-//  Created by Vinod Rathod on 05/07/24.
+//  Created by Vinod Rathod on 09/07/24.
 //
 
 import SwiftUI
 import Inject
 
-struct ListItemComponentAlt: View {
-//    @ObservedObject private var IO = Inject.observer
-    @State var textInput: String = ""
-    
-    let iconName: String
-    let title: String
-    let type: String
-    let iconColor: Color
-    let showRightComponent: Bool
-    let rightIcon: String = "arrow.left.arrow.right"
-    
+struct WalletItemWithIcon: View {
+        @ObservedObject private var IO = Inject.observer
+        @State var textInput: String = ""
+        
+        let iconName: String
+        let title: String
+        let type: String
+        let iconColor: Color
+        let showRightComponent: Bool
+        let rightIcon: String = "xmark"
+        
     var body: some View {
         HStack {
             Circle()
-                .fill(Color.white)
+                .fill(Color(iconColor))
                 .frame(width: 40, height: 40)
                 .overlay {
                     Image(systemName: iconName)
                         .font(.system(size: 20))
-                        .foregroundColor(Color("CustomBlack"))
+                        .foregroundColor(Color.white)
                 }
             
             if type == "textbox" {
@@ -37,11 +37,12 @@ struct ListItemComponentAlt: View {
                     .frame(height: 34)
             } else {
                 Text(title)
-                    .font(.system(size: 14))
-                    .foregroundColor(Color("SecondaryBlack"))
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundColor(Color("CustomBlack"))
+                    .padding(.leading, 6)
                 
                 Spacer()
-
+                
                 if showRightComponent {
                     Circle()
                         .fill(Color(UIColor.systemGray4))
@@ -53,11 +54,12 @@ struct ListItemComponentAlt: View {
                         }
                 }
             }
+
         }
         .padding(.top, 10)
         .frame(maxWidth: .infinity)
         
-//        .enableInjection()
+        .enableInjection()
     }
 }
 

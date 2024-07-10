@@ -12,6 +12,7 @@ struct SelectCategories: View {
     @ObservedObject private var IO = Inject.observer
     @StateObject var categoryViewModel: CategoryViewModel = CategoryViewModel()
     @Binding var isPresented: Bool
+    @Binding var selectedCategory: CategoryModel
     @State var hideIconsMap: [String: Bool] = [
         "miscellaneous": true,
         "entertainment": true,
@@ -119,6 +120,11 @@ struct SelectCategories: View {
                                                                     .frame(width: 50, height: 50)
                                                             )
                                                             .frame(height: 50)
+                                                            .onTapGesture {
+                                                                selectedCategory = category
+                                                                print("selectedCategory: ", selectedCategory)
+                                                                isPresented.toggle()
+                                                            }
                                                         
                                                         Text("\(category.title)")
                                                             .font(.system(size: 12))

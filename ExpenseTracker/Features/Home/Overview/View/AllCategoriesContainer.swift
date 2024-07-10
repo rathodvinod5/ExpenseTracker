@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct AllCategoriesContainer: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     @EnvironmentObject var categoryData: CateogoriesViewModel
     
 //    var categoriesItemsData: [CategoriesModel]
@@ -25,6 +25,6 @@ struct AllCategoriesContainer: View {
             }
         }
         
-            .enableInjection()
+//            .enableInjection()
     }
 }

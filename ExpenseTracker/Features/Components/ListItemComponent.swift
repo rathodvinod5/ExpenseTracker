@@ -9,7 +9,7 @@ import SwiftUI
 import Inject
 
 struct ListItemComponent: View {
-    @ObservedObject private var IO = Inject.observer
+//    @ObservedObject private var IO = Inject.observer
     
     let iconName: String
     let title: String
@@ -50,6 +50,6 @@ struct ListItemComponent: View {
         .padding(.top, 10)
         .frame(maxWidth: .infinity)
         
-        .enableInjection()
+//        .enableInjection()
     }
 }

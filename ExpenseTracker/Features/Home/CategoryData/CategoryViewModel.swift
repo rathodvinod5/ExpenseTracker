@@ -30,6 +30,7 @@ class CategoryViewModel: ObservableObject {
     var parentCategories: [ParentCategoryModel] = []
     
     init() {
+        print("init CategoryViewModal")
         initialiseParentCategories()
         initialiseAllCategories()
     }
