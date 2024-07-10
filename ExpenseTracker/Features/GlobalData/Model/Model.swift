@@ -15,3 +15,9 @@ struct WalletModel: Identifiable {
     var icon: String;
     var backgroundColor: Color
 }
+
+struct RepeatTypeModel: Identifiable {
+    var id: UUID;
+    var title: String;
+    var tag: String;
+}

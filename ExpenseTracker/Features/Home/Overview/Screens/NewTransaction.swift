@@ -11,6 +11,7 @@ import Inject
 struct NewTransaction: View {
     @ObservedObject private var IO = Inject.observer
     
+    @StateObject var transactionViewModal: TransactionViewModal = TransactionViewModal()
     @State private var currentIndex = 0
     @State private var isPresented = false
     @State private var showHalfModal: Bool = false
@@ -186,6 +187,34 @@ struct NewTransaction: View {
             .padding(.horizontal, 20)
             
             Spacer()
+            
+            Capsule()
+                .fill(Color("CustomBlack"))
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .frame(alignment: .leading)
+                .overlay {
+                    Text("SAVE")
+                        .font(.system(size: 18, weight: .medium))
+                        .foregroundColor(Color.white)
+                }
+                .onTapGesture {
+                    transactionViewModal.addTransaction(
+                        transactonAmount: 120,
+                        transactionType: TransactonEnum.expense,
+                        fromWallet: "Spending",
+                        toWallet: "Savings",
+                        description: "Testing",
+                        category: "miscelleneous"
+                    )
+                    withAnimation {
+                        showAddNewSheet.toggle()
+                    }
+                }
+                .padding(.top, 20)
+                .padding(.bottom, 30)
+                .padding(.horizontal, 30)
+            
         }
         .padding(.vertical, 10)
         

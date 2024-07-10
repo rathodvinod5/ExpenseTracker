@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 class WalletAndTransactionViewModal: ObservableObject {
-    var allWallets: [WalletModel] = []
+    @Published var allWallets: [WalletModel] = []
+    
     
     var colorsMap: [String: Color] = [
         "blue": Color(red: 144/255, green: 202/255, blue: 249/255),

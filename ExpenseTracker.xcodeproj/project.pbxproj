@@ -31,6 +31,8 @@
 		67787E612C2D6F8C009914AA /* HeadCategoriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67787E602C2D6F8C009914AA /* HeadCategoriesContainer.swift */; };
 		67787E632C2D6FDC009914AA /* AllCategoriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67787E622C2D6FDC009914AA /* AllCategoriesContainer.swift */; };
 		678729C42C346690002E93D0 /* NewTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678729C32C346690002E93D0 /* NewTransaction.swift */; };
+		678B3D622C3ED476007FD672 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B3D612C3ED476007FD672 /* TransactionModel.swift */; };
+		678B3D642C3ED7D2007FD672 /* TransactionViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B3D632C3ED7D2007FD672 /* TransactionViewModal.swift */; };
 		67969FBF2B91F4FC00220D97 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969FBE2B91F4FC00220D97 /* ExpenseTrackerApp.swift */; };
 		67969FC12B91F4FC00220D97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67969FC02B91F4FC00220D97 /* ContentView.swift */; };
 		67969FC32B91F4FF00220D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67969FC22B91F4FF00220D97 /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		67787E602C2D6F8C009914AA /* HeadCategoriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadCategoriesContainer.swift; sourceTree = "<group>"; };
 		67787E622C2D6FDC009914AA /* AllCategoriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesContainer.swift; sourceTree = "<group>"; };
 		678729C32C346690002E93D0 /* NewTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransaction.swift; sourceTree = "<group>"; };
+		678B3D612C3ED476007FD672 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		678B3D632C3ED7D2007FD672 /* TransactionViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModal.swift; sourceTree = "<group>"; };
 		67969FBB2B91F4FC00220D97 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67969FBE2B91F4FC00220D97 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		67969FC02B91F4FC00220D97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				67643E402C3D40B1004D5ED7 /* Model.swift */,
+				678B3D612C3ED476007FD672 /* TransactionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				67643E422C3D4270004D5ED7 /* WalletAndTransactionViewModal.swift */,
+				678B3D632C3ED7D2007FD672 /* TransactionViewModal.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				6705159C2C2AE5130075E73F /* TransactionListItem.swift in Sources */,
 				67787E5F2C2D5841009914AA /* CateogoriesViewModel.swift in Sources */,
 				67D1121C2BADA11A00E5CC5C /* MonthSelector.swift in Sources */,
+				678B3D622C3ED476007FD672 /* TransactionModel.swift in Sources */,
 				67787E5B2C2D4EF2009914AA /* SwitchButtons.swift in Sources */,
 				6761A0E42C3DAED800804612 /* CalendarMonthView.swift in Sources */,
 				67969FC12B91F4FC00220D97 /* ContentView.swift in Sources */,
@@ -407,6 +414,7 @@
 				673D59EE2C2E9F7500E086CD /* CategoriesListItems.swift in Sources */,
 				67D112112BAD97F400E5CC5C /* Color.swift in Sources */,
 				67E0366C2BB4202500D5574B /* ItemListViewModel.swift in Sources */,
+				678B3D642C3ED7D2007FD672 /* TransactionViewModal.swift in Sources */,
 				67D112142BAD999700E5CC5C /* TextWithLabel.swift in Sources */,
 				674E10CF2C2C4F7B00ECE8A5 /* ListComponent.swift in Sources */,
 				67643E3B2C3D3E13004D5ED7 /* SheetContents.swift in Sources */,
