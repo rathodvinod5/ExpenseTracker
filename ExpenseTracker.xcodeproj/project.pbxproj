@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -105,6 +105,11 @@
 		67ECE22F2BCFFCC30018D93D /* OptionsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		676D37C32E575B030019AE2A /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+		6789B7512E57600A00AB0E97 /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		67969FB82B91F4FC00220D97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -183,6 +188,8 @@
 		67969FBD2B91F4FC00220D97 /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6789B7512E57600A00AB0E97 /* ViewModel */,
+				676D37C32E575B030019AE2A /* Model */,
 				67D1120F2BAD97D600E5CC5C /* Utilities */,
 				67D1120D2BAD979400E5CC5C /* Services */,
 				67D112082BAD95FA00E5CC5C /* Features */,
@@ -320,6 +327,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				676D37C32E575B030019AE2A /* Model */,
+				6789B7512E57600A00AB0E97 /* ViewModel */,
 			);
 			name = ExpenseTracker;
 			packageProductDependencies = (
