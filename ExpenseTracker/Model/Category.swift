@@ -19,3 +19,7 @@ class Category {
         self.expenses = []
     }
 }
+
+enum CategoryType: String, Codable {
+    case income, expense
+}

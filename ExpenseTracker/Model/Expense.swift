@@ -14,18 +14,21 @@ class Expense {
     var amount: Double
     var date: Date
     var category: Category? // Optional relationship to Category
+    var note: String?
 
     init(
         id: UUID = UUID(),
         name: String,
         amount: Double,
         date: Date = Date.now,
-        category: Category? = nil
+        category: Category? = nil,
+        note: String? = nil
     ) {
         self.id = id
         self.name = name
         self.amount = amount
         self.date = date
         self.category = category
+        self.note = note
     }
 }
